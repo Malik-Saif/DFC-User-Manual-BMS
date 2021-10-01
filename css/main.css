@@ -1,0 +1,771 @@
+/*=======================================================
+                        variables
+=======================================================*/
+/*=======================================================
+                reset default setting
+=======================================================*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* Remove all animations and transitions for people that prefer not to see them */
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 120px;
+  /* height of sticky header */
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'Open Sans', sans-serif;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  background-color: #ffffff;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Dubai";
+  font-weight: 700;
+  src: url("../fonts/Dubai-Bold.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: 500;
+  src: url("../fonts/Dubai-Regular.woff2");
+}
+@font-face {
+  font-family: "Dubai";
+  font-weight: 400;
+  src: url("../fonts/Dubai-Light.woff2");
+}
+/*=======================================================
+                        general
+=======================================================*/
+.container {
+  width: 100%;
+  max-width: 1114px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section-header {
+  margin-bottom: 75px;
+}
+@media (max-width: 991px) {
+  .section-header {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .section-header {
+    margin-bottom: 45px;
+  }
+}
+.section-header .section-title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #00ABD1;
+  margin-bottom: 24px;
+}
+@media (max-width: 991px) {
+  .section-header .section-title {
+    font-size: 26px;
+    line-height: 32px;
+    margin-bottom: 14px;
+  }
+}
+.section-header .section-desc {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 991px) {
+  .section-header .section-desc {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.section-body .card-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  -webkit-column-gap: 32px;
+          column-gap: 32px;
+  row-gap: 75px;
+}
+@media (max-width: 991px) {
+  .section-body .card-box {
+    -webkit-column-gap: 22px;
+            column-gap: 22px;
+    row-gap: 65px;
+  }
+}
+@media (max-width: 767px) {
+  .section-body .card-box {
+    -webkit-column-gap: 12px;
+            column-gap: 12px;
+    row-gap: 55px;
+  }
+}
+.section-body .card .card-header {
+  margin-bottom: 25px;
+  border-radius: 11px;
+}
+@media (max-width: 991px) {
+  .section-body .card .card-header {
+    margin-bottom: 16px;
+  }
+}
+.section-body .card .card-img {
+  width: 100%;
+  border-radius: 11px;
+}
+.section-body .card .card-title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  color: #272727;
+  margin-bottom: 25px;
+}
+@media (max-width: 991px) {
+  .section-body .card .card-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+}
+.section-body .card .card-desc {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #272727;
+}
+@media (max-width: 991px) {
+  .section-body .card .card-desc {
+    font-size: 15px;
+  }
+}
+
+/*=======================================================
+                        header
+=======================================================*/
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  width: 100%;
+  height: 92px;
+  -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+}
+#header .header-container {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 992px) {
+  #header .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+#header .logo-box {
+  height: 92px;
+  float: left;
+}
+@media (min-width: 992px) {
+  #header .logo-box {
+    padding-top: 13px;
+  }
+}
+@media (max-width: 991px) {
+  #header .logo-box {
+    padding-top: 21px;
+  }
+}
+@media (min-width: 992px) {
+  #header .brand-img {
+    max-width: 150px;
+  }
+}
+@media (max-width: 991px) {
+  #header .brand-img {
+    max-width: 125px;
+  }
+}
+#header .navbar {
+  margin-right: auto;
+  margin-left: auto;
+  float: left;
+}
+@media (min-width: 992px) {
+  #header .navbar {
+    display: block !important;
+  }
+}
+@media (max-width: 991px) {
+  #header .navbar {
+    display: none;
+    position: absolute;
+    top: 93px;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    padding: 30px 15px 20px;
+    -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+  }
+}
+@media (min-width: 992px) {
+  #header .navbar-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    justify-self: center;
+    height: 92px;
+  }
+}
+@media (min-width: 991px) {
+  #header .navbar-nav .nav-item {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media (min-width: 1200px) {
+  #header .navbar-nav .nav-item {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+}
+@media (max-width: 991px) {
+  #header .navbar-nav .nav-item {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+}
+#header .navbar-nav .nav-link {
+  font-family: 'Dubai', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #272727;
+}
+@media (min-width: 1200px) {
+  #header .navbar-nav .nav-link {
+    font-size: 18px;
+  }
+}
+#header .navbar-nav .nav-link:hover {
+  color: #00ABD1;
+}
+#header .external-links-box {
+  float: right;
+}
+#header .site-list {
+  height: 92px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 992px) {
+  #header .site-list .site-item {
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
+@media (max-width: 991px) {
+  #header .site-list .site-item {
+    margin-left: 6px;
+    margin-right: 6px;
+  }
+}
+#header .site-list .site-item .site-link img {
+  height: 100%;
+}
+@media (min-width: 992px) {
+  #header .site-list .site-item .site-link img {
+    max-height: 24px;
+  }
+}
+@media (max-width: 991px) {
+  #header .site-list .site-item .site-link img {
+    max-height: 20px;
+  }
+}
+@media (min-width: 992px) {
+  #header .site-list .btn-toggle {
+    display: none;
+  }
+}
+
+/*===============================================
+                    hero-banner
+===============================================*/
+#hero-banner {
+  margin-bottom: 100px;
+}
+#hero-banner .hero-content-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 180px;
+}
+#hero-banner .hero-title {
+  max-width: 468px;
+  font-family: 'Dubai', sans-serif;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+@media (max-width: 540px) {
+  #hero-banner .hero-title {
+    font-size: 22px;
+    line-height: 34px;
+  }
+}
+@media (min-width: 576px) {
+  #hero-banner .hero-title {
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+@media (min-width: 768px) {
+  #hero-banner .hero-title {
+    font-size: 42px;
+    line-height: 54px;
+  }
+}
+@media (min-width: 992px) {
+  #hero-banner .hero-title {
+    font-size: 52px;
+    line-height: 64px;
+  }
+}
+@media (min-width: 1200px) {
+  #hero-banner .hero-title {
+    font-size: 66px;
+    line-height: 74px;
+  }
+}
+@media (min-width: 1440px) {
+  #hero-banner .hero-title {
+    font-size: 72px;
+    line-height: 84px;
+  }
+}
+
+/*===============================================
+                genral-admin-topics
+===============================================*/
+#genral-admin-topics {
+  margin-bottom: 149px;
+}
+
+/*===============================================
+                hq-admin-guide
+===============================================*/
+#hq-admin-guide {
+  margin-bottom: 197px;
+}
+
+/*===============================================
+                    post-detail
+===============================================*/
+#post-detail {
+  padding-top: 150px;
+  padding-bottom: 144px;
+  -webkit-box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 7px 40px rgba(0, 0, 0, 0.1);
+}
+#post-detail .container {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+#post-detail .btn-sidebar-toggle {
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 195px;
+  z-index: 999999;
+  background-color: #ffffff;
+  width: 40px;
+  height: 28px;
+  border: 1px solid #272727;
+  border-radius: 3px 0 0 3px;
+  border-right: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (min-width: 992px) {
+  #post-detail .btn-sidebar-toggle {
+    display: none;
+  }
+}
+#post-detail .btn-sidebar-toggle p {
+  line-height: 0;
+  font-weight: 700;
+  margin-top: -6px;
+}
+#post-detail #aside {
+  position: absolute;
+  left: 0;
+  top: 0px;
+  bottom: 0;
+  width: 100%;
+  max-width: 332px;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 992px) {
+  #post-detail #aside {
+    display: block !important;
+    padding-left: 2rem;
+  }
+}
+@media (max-width: 991px) {
+  #post-detail #aside {
+    display: none;
+    width: 100%;
+    max-width: 365px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+#post-detail .aside-outer-box {
+  position: fixed;
+  background-color: #ffffff;
+  padding-right: 10px;
+}
+#post-detail .aside-inner-box {
+  max-width: 290px;
+  padding-right: 17px;
+  height: calc(100vh - 320px);
+  overflow-y: scroll;
+  /* width */
+  /* Track */
+  /* Handle */
+}
+#post-detail .aside-inner-box::-webkit-scrollbar {
+  width: 7px;
+}
+#post-detail .aside-inner-box::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.45);
+}
+#post-detail .aside-inner-box::-webkit-scrollbar-thumb {
+  background: #737373;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+#post-detail .brand-img {
+  max-width: 107px;
+  margin-bottom: 41px;
+}
+#post-detail .aside-title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 41px;
+}
+#post-detail .aside-subnav-list {
+  margin-left: 15px;
+}
+#post-detail .aside-link {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  color: #272727;
+  margin-bottom: 15px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  max-width: 266px;
+}
+#post-detail .aside-link:hover {
+  color: #00ABD1;
+}
+#post-detail .aside-link.active {
+  color: #00ABD1;
+}
+#post-detail .aside-subnav-link {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21px;
+  text-align: left;
+  color: #272727;
+  margin-bottom: 15px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  max-width: 266px;
+}
+#post-detail .aside-subnav-link:hover {
+  color: #00ABD1;
+  text-decoration: underline;
+}
+#post-detail .aside-subnav-link.active {
+  color: #00ABD1;
+  text-decoration: underline;
+}
+#post-detail #content {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-left: auto;
+}
+@media screen and (min-width: 992px) {
+  #post-detail #content {
+    width: 68%;
+  }
+}
+#post-detail .btn-back {
+  display: block;
+  margin-left: auto;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+#post-detail .title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 42px;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 36px;
+}
+#post-detail .sub-section {
+  margin-bottom: 36px;
+}
+#post-detail .section-title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+#post-detail .subsection-title {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21px;
+  text-align: left;
+  margin-bottom: 18px;
+}
+#post-detail .subsection-desc {
+  font-family: 'Dubai', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 24px;
+}
+#post-detail .section-img {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+/*===============================================
+                    footer
+===============================================*/
+#footer {
+  position: relative;
+  z-index: 9999;
+  padding-top: 65px;
+  background: linear-gradient(89.95deg, #06A7E0 0.55%, #BED62F 99.96%);
+  margin-top: 1px;
+}
+#footer .container {
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+#footer .container .info {
+  width: 395px;
+  margin-right: 35px;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 500px) {
+  #footer .container .info {
+    margin-right: 0;
+  }
+}
+#footer .container .info img {
+  max-width: 162px;
+}
+#footer .container .info p {
+  font-family: 'Dubai', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 11px;
+  color: #ffffff;
+}
+@media screen and (max-width: 991px) {
+  #footer .container .info p {
+    line-height: 22px;
+  }
+}
+#footer .container .links {
+  width: 140px;
+  margin-right: 108px;
+  color: #ffffff;
+  margin-bottom: 2.5rem;
+}
+@media screen and (max-width: 1140px) {
+  #footer .container .links {
+    margin-right: 40px;
+  }
+}
+#footer .container .links p {
+  font-family: 'Dubai', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  margin-bottom: 34px;
+  color: #ffffff;
+}
+#footer .container .links button, #footer .container .links a {
+  font-family: 'Dubai', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+#footer .container .links button:hover, #footer .container .links a:hover {
+  opacity: .8;
+}
+#footer .container .links:nth-last-child(1) {
+  margin-right: 0;
+}
+#footer .copyright {
+  font-family: 'Dubai', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 30px 15px;
+  color: #ffffff;
+  text-align: center;
+}
