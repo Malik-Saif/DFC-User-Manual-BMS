@@ -507,18 +507,8 @@ ul, ol {
   font-weight: 700;
   text-align: left;
   margin: 0;
-}
-@media (max-width: 540px) {
-  #hero-banner .hero-title {
-    font-size: 22px;
-    line-height: 34px;
-  }
-}
-@media (min-width: 576px) {
-  #hero-banner .hero-title {
-    font-size: 32px;
-    line-height: 44px;
-  }
+  font-size: 32px;
+  line-height: 44px;
 }
 @media (min-width: 768px) {
   #hero-banner .hero-title {
