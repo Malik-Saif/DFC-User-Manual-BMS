@@ -224,16 +224,11 @@ ul, ol {
                         header
 =======================================================*/
 #header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #ffffff;
+  -webkit-transition: .3s;
+  transition: .3s;
   width: 100%;
   height: 92px;
-  -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
-  z-index: 99999;
+  background-color: #ffffff;
 }
 #header .header-container {
   position: relative;
@@ -486,6 +481,18 @@ ul, ol {
   }
 }
 
+.fixed_header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 92px;
+  -webkit-box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+  z-index: 99999;
+}
+
 /*===============================================
                     hero-banner
 ===============================================*/
@@ -533,6 +540,32 @@ ul, ol {
     font-size: 72px;
     line-height: 84px;
   }
+}
+#hero-banner .hero-desc {
+  font-family: 'Dubai', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+  letter-spacing: 0em;
+  text-align: center;
+  max-width: 671px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 51px;
+}
+@media (max-width: 991px) {
+  #hero-banner .hero-desc {
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+/*===============================================
+                genral-admin-topics
+===============================================*/
+#user-manual-topics {
+  margin-bottom: 300px;
 }
 
 /*===============================================
