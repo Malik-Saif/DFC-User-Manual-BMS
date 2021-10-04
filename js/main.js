@@ -6,6 +6,7 @@ $(document).ready(function() {
     //=========================================
     $(document).mouseup(function (e) {
 		var container = new Array();
+		container.push($('.dropdown .sub-menu'));
 		container.push($('#aside'));
 
 		$.each(container, function (key, value) {
@@ -17,7 +18,8 @@ $(document).ready(function() {
 			}
 		});
 	});
-    
+
+
     //=========================================
     //					navbar
     //=========================================
