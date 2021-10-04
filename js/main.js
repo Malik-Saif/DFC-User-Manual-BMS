@@ -1,40 +1,4 @@
 $(document).ready(function() {
-    
-    //=========================================
-    //					navbar
-    //=========================================
-    $(".btn-toggle").on("click", function () {
-        $(".navbar").toggle();
-    });
-
-    $(".btn-sidebar-toggle").on("click", function () {
-        $("#aside").toggle();
-    });
-
-    $(".aside-link").on("click", function () {
-        $(".aside-link").removeClass('active');
-        $(".aside-subnav-link").removeClass('active');
-        $(this).addClass('active');
-    });
-
-    $(".aside-subnav-link").on("click", function () {
-        $(".aside-link").removeClass('active');
-        $(".aside-subnav-link").removeClass('active');
-        $(this).addClass('active');
-    });
-
-
-    $(function() {
-        $("#header .nav-link").on("click touch", function() {
-            $(".btn-toggle").click();
-        });
-    });
-
-    $(function() {
-        $(".aside-link, .aside-subnav-link").on("click touch", function() {
-            $(".btn-sidebar-toggle").click();
-        });
-    });
 
 
     //=========================================
@@ -42,7 +6,6 @@ $(document).ready(function() {
     //=========================================
     $(document).mouseup(function (e) {
 		var container = new Array();
-		container.push($('.navbar'));
 		container.push($('#aside'));
 
 		$.each(container, function (key, value) {
@@ -54,4 +17,46 @@ $(document).ready(function() {
 			}
 		});
 	});
+    
+    //=========================================
+    //					navbar
+    //=========================================
+    $(".btn-toggle").on("click touch", function () {
+        $(".navbar").toggle();
+    });
+
+
+    // $(function() {
+    //     $("#header .nav-link").on("click touch", function() {
+    //         $(".btn-toggle").click();
+    //     });
+    // });
+
+    $(function() {
+        $("#header .dropdown").on("click touch", function() {
+            $("#header .sub-menu").toggle();
+        });
+    });
+
+    $(".btn-sidebar-toggle").on("click touch", function () {
+        $("#aside").toggle();
+    });
+
+    $(".aside-link").on("click touch", function () {
+        $(".aside-link").removeClass('active');
+        $(".aside-subnav-link").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(".aside-subnav-link").on("click touch", function () {
+        $(".aside-link").removeClass('active');
+        $(".aside-subnav-link").removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $(function() {
+        $(".aside-link, .aside-subnav-link").on("click touch", function() {
+            $(".btn-sidebar-toggle").click();
+        });
+    });
 });

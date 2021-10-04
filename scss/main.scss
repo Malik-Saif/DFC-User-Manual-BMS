@@ -197,6 +197,7 @@
             background-color: $colorWhite;
             padding: 30px 15px 20px;
             box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
         }
     }
 
@@ -209,13 +210,13 @@
         }
         .nav-item{
             @media (min-width: 991px) {
-                margin-left: 12px;
-                margin-right: 12px;
+                margin-left: 7px;
+                margin-right: 7px;
             }
             
             @media (min-width: 1200px) {
-                margin-left: 24px;
-                margin-right: 24px;
+                margin-left: 19px;
+                margin-right: 19px;
             }
 
             @media (max-width: 991px) {
@@ -223,7 +224,66 @@
                 margin-bottom: 12px;
             }
         }
+        .dropdown{
+            position: relative;
+            &::after{
+                position: absolute;
+                // content: "▼";
+                content: "🢓";
+                top: 0px;
+                font-size: 30px;
+                @media (max-width: 991px) {
+                    left: 70px;
+                }
+            }
+            &:hover{
+                .nav-link{
+                    color: $primaryColor;
+                    @media (min-width: 992px) {
+                        border-bottom: 3px solid $primaryColor;
+                    }
+                }
+            }
+        }
         .nav-link{
+            font-family: 'Dubai', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 21px;
+            color: $colorBlack;
+            cursor: pointer;
+            @media (min-width: 992px) {
+                padding: 28px 5px;
+            }
+            @media (min-width: 1200px) {
+                font-size: 18px;
+            }
+            &:hover{
+                color: $primaryColor;
+                @media (min-width: 992px) {
+                    border-bottom: 3px solid $primaryColor;
+                }
+            }
+        }
+    }
+
+    .sub-menu{
+        display: none;
+        background-color: $colorWhite;
+        width: max-content;
+        padding: 5px 20px 14px;
+        @media (min-width: 992px) {
+            position: absolute !important;
+            left: 0;
+            right: 0;
+            top: 56px;
+            box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+        }
+        .sub-menu-item{
+            margin-top: 12px;
+            margin-bottom: 12px;
+        }
+        .sub-menu-link{
             font-family: 'Dubai', sans-serif;
             font-size: 16px;
             font-weight: 700;
