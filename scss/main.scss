@@ -161,19 +161,20 @@
         height: 92px;
         float: left;
         @media (min-width: 992px) {
-            padding-top: 13px;
+            padding-top: 27px;
         }
         @media (max-width: 991px) {
-            padding-top: 21px;
+            padding-top: 28px;
         }
     }
     .brand-img{
-        @media (min-width: 992px) {
-            max-width: 150px;
-        }
-        @media (max-width: 991px) {
-            max-width: 125px;
-        }
+        max-width: 93px;
+        // @media (min-width: 992px) {
+        //     max-width: 150px;
+        // }
+        // @media (max-width: 991px) {
+        //     max-width: 125px;
+        // }
     }
 
     .navbar{
@@ -237,10 +238,12 @@
                 display: flex;
                 align-items: center;
                 @media (min-width: 992px) {
-                    padding: 34px 5px;
+                    // padding: 34px 5px;
                 }
                 img{
                     margin-left: 7px;
+                    max-width: 10px;
+                    margin-top: -2px;
                 }
             }
             &:hover{
@@ -256,19 +259,22 @@
             }
         }
         .nav-link{
+            user-select: none;
             font-family: 'Dubai', sans-serif;
-            font-size: 16px;
+            // font-size: 16px;
+            font-size: .75em;
             font-weight: 700;
             line-height: 21px;
             color: $colorBlack;
             cursor: pointer;
             border-bottom: 3px solid transparent;
-            @media (min-width: 992px) {
-                padding: 28px 5px;
-            }
-            @media (min-width: 1200px) {
-                font-size: 18px;
-            }
+            text-transform: uppercase;
+            // @media (min-width: 992px) {
+            //     padding: 28px 5px;
+            // }
+            // @media (min-width: 1200px) {
+            //     font-size: 18px;
+            // }
             &:hover{
                 color: $primaryColor;
                 @media (min-width: 992px) {
@@ -288,6 +294,7 @@
             left: 0;
             right: 0;
             top: 92px;
+            top: 58px;
             border-radius: 3px;
             box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
         }
@@ -296,14 +303,17 @@
             margin-bottom: 12px;
         }
         .sub-menu-link{
+            user-select: none;
             font-family: 'Dubai', sans-serif;
-            font-size: 16px;
+            // font-size: 16px;
+            font-size: .75em;
             font-weight: 700;
             line-height: 21px;
             color: $colorBlack;
-            @media (min-width: 1200px) {
-                font-size: 18px;
-            }
+            text-transform: uppercase;
+            // @media (min-width: 1200px) {
+            //     font-size: 18px;
+            // }
             &:hover{
                 color: $primaryColor;
             }
@@ -318,6 +328,7 @@
         display: flex;
         align-items: center;
         .site-item{
+            user-select: none;
             @media (min-width: 992px) {
                 margin-left: 12px;
                 margin-right: 12px;
@@ -329,10 +340,12 @@
             .site-link img{
                 height: 100%;
                 @media (min-width: 992px) {
-                    max-height: 24px;
+                    // max-height: 24px;
+                    max-height: 20px;
                 }
                 @media (max-width: 991px) {
-                    max-height: 20px;
+                    // max-height: 20px;
+                    max-height: 16px;
                 }
             }
         }
@@ -606,6 +619,17 @@
             color: $primaryColor;
             text-decoration: underline;
         }
+    }
+
+    .aside-subnav-link.active::before {
+        position: absolute;
+        content: "";
+        background-color: $primaryColor;
+        width: 200px;
+        height: 2px;
+        left: -190px;
+        /* right: 0; */
+        margin-top: 8px;
     }
 
     .aside-subnav-link.active{
