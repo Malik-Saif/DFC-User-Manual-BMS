@@ -49,6 +49,7 @@
         text-align: center;
         color: $primaryColor;
         margin-bottom: 24px;
+        text-transform: capitalize;
 
         @media (max-width: 991px) {
             font-size: 26px;
@@ -112,6 +113,7 @@
             text-align: left;
             color: $colorBlack;
             margin-bottom: 25px;
+            text-transform: capitalize;
             @media (max-width: 991px) {
                 font-size: 20px;
                 margin-bottom: 16px;
@@ -222,18 +224,18 @@
         }
         .dropdown{
             position: relative;
-            &::after{
-                position: absolute;
-                // content: "▼";
-                // content: "🢓";
-                content: '';
-                background-image: url("../images/icon/arrow-down.png");
-                top: 0px;
-                font-size: 30px;
-                @media (max-width: 991px) {
-                    left: 70px;
-                }
-            }
+            // &::after{
+            //     position: absolute;
+            //     // content: "▼";
+            //     // content: "🢓";
+            //     content: '';
+            //     background-image: url("../images/icon/arrow-down.png");
+            //     top: 0px;
+            //     font-size: 30px;
+            //     @media (max-width: 991px) {
+            //         left: 70px;
+            //     }
+            // }
             .nav-link{
                 display: flex;
                 align-items: center;
@@ -242,7 +244,7 @@
                 }
                 img{
                     margin-left: 7px;
-                    max-width: 10px;
+                    max-width: 8px;
                     margin-top: -2px;
                 }
             }
@@ -337,6 +339,25 @@
                 margin-left: 6px;
                 margin-right: 6px;
             }
+            .book-class{
+                user-select: none;
+                font-family: 'Dubai', sans-serif;
+                // font-size: 16px;
+                font-size: .75em;
+                font-weight: 700;
+                line-height: 21px;
+                color: $colorBlack;
+                text-transform: uppercase;
+                color: $colorWhite;
+                background-color: $primaryColor;
+                border-radius: 30px;
+                @media (min-width: 992px) {
+                    padding: 11px 36px 10px;
+                }
+                @media (max-width: 991px) {
+                    padding: 8px 26px 7px;
+                }
+            }
             .site-link img{
                 height: 100%;
                 @media (min-width: 992px) {
@@ -380,7 +401,7 @@
     .hero-content-box{
         display: flex;
         align-items: center;
-        margin-top: 180px;
+        margin-top: 111px;
     }
     .hero-title{
         max-width: 468px;
@@ -578,10 +599,10 @@
         color: $colorBlack;
         margin-bottom: 15px;
         display: inline-block;
-        white-space: nowrap;
-        overflow: hidden !important;
-        text-overflow: ellipsis;
-        max-width: 266px;
+        // white-space: nowrap;
+        // overflow: hidden !important;
+        // text-overflow: ellipsis;
+        // max-width: 266px;
         &:hover{
             color: $primaryColor;
         }
@@ -714,6 +735,77 @@
         //     -o-transform: translate(8px, -8px);
         // }
     }
+
+    .section-list{
+        list-style: disc;
+        margin-left: 24px;
+        margin-bottom: 24px;
+    }
+
+    .section-item{
+        font-family: 'Dubai', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: left;
+    }
+}
+
+
+/*===============================================
+                    live-chat
+===============================================*/
+#live-chat{
+    background: linear-gradient(89.95deg, #06A7E0 0.55%, #BED62F 99.96%);
+    padding-top: 92px;
+    padding-bottom: 4px;
+    .live-chat-title{
+        font-family: 'Dubai', sans-serif;
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 42px;
+        text-align: center;
+        color: $colorWhite;
+        max-width: 843px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 38px;
+        @media (max-width: 991px) {
+            font-size: 30px;
+            line-height: 36px;
+        }
+    
+        @media (max-width: 767px) {
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    .btn-live-chat{
+        display: block;
+        color: $colorWhite;
+        background: $primaryColor;
+        font-family: 'Dubai', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+        border: none;
+        border-radius: 30px;
+        padding: 15px 41px 14px;
+        margin-left: auto;
+        margin-right: auto;
+        @media (max-width: 991px) {
+            font-size: 16px;
+            line-height: 18px;
+            padding: 15px 35px 14px;
+        }
+    
+        @media (max-width: 767px) {
+            font-size: 14px;
+            line-height: 14px;
+            padding: 15px 29px 14px;
+        }
+    }
 }
 
 
@@ -725,14 +817,13 @@
     z-index: 9999;
     padding-top: 65px;
     background: linear-gradient(89.95deg, #06A7E0 0.55%, #BED62F 99.96%);
-    margin-top: 1px;
 
     .container {
         border-bottom: 1px solid $colorWhite;
         // display: grid;
         // grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
         // grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
-        padding-bottom: 75px;
+        padding-bottom: 50px;
         display: flex;
         flex-wrap: wrap;
 
