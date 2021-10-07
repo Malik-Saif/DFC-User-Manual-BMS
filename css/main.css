@@ -667,7 +667,7 @@ ul, ol {
   #post-detail #aside {
     display: none;
     width: 100%;
-    max-width: 365px;
+    max-width: 332px;
     padding-left: 2rem;
     padding-right: 2rem;
   }
@@ -953,7 +953,7 @@ ul, ol {
 }
 @media screen and (max-width: 1140px) {
   #footer .container .links {
-    margin-right: 40px;
+    margin-right: 20px;
   }
 }
 #footer .container .links p {
