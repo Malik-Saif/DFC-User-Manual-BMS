@@ -882,9 +882,6 @@ ul, ol {
 #social-media-link .social-media-link-inner-box .contact-info-card:hover svg, #social-media-link .social-media-link-inner-box .contact-info-card:hover path {
   fill: #ffffff;
 }
-#social-media-link .social-media-link-inner-box .contact-info-card svg, #social-media-link .social-media-link-inner-box .contact-info-card img {
-  margin-bottom: 28px;
-}
 #social-media-link .contact-info-card-title {
   font-family: 'Dubai', sans-serif;
   font-size: 18px;
