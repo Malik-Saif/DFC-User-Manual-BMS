@@ -931,13 +931,17 @@ ul, ol {
       flex-wrap: wrap;
 }
 #footer .container .info {
-  width: 395px;
+  width: 365px;
   margin-right: 35px;
   margin-bottom: 2.5rem;
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   #footer .container .info {
+    width: 100%;
     margin-right: 0;
+  }
+  #footer .container .info img {
+    margin: auto;
   }
 }
 #footer .container .info img {
@@ -957,8 +961,8 @@ ul, ol {
   }
 }
 #footer .container .links {
-  width: 140px;
-  margin-right: 108px;
+  width: 170px;
+  margin-right: 80px;
   color: #ffffff;
   margin-bottom: 2.5rem;
 }
