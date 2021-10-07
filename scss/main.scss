@@ -758,63 +758,62 @@
 
 
 /*===============================================
-                    live-chat
+            social-media-link
 ===============================================*/
-#live-chat{
-    background: linear-gradient(89.95deg, #06A7E0 0.55%, #BED62F 99.96%);
-    padding-top: 92px;
-    padding-bottom: 4px;
-    .live-chat-title{
-        font-family: 'Dubai', sans-serif;
-        font-size: 36px;
-        font-weight: 500;
-        line-height: 42px;
-        text-align: center;
-        color: $colorWhite;
-        max-width: 843px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 38px;
-        @media (max-width: 991px) {
-            font-size: 30px;
-            line-height: 36px;
-        }
+#social-media-link{
+    .social-media-link-inner-box{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        justify-content: center;
+        column-gap: 23px;
+        row-gap: 23px;
+        margin-bottom: 103px;
     
-        @media (max-width: 767px) {
-            font-size: 24px;
-            line-height: 30px;
+        .contact-info-card{
+            background-color: $colorWhite;
+            box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
+            border-radius: 11px;
+            padding: 37px 50px 44px;
+    
+            p{
+                text-align: center;
+                color: $colorBlack;
+            }
+    
+            svg{
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+    
+            &:hover{
+                background: linear-gradient(159.67deg, rgba(0, 165, 225, 0.85) 1.55%, rgba(190, 214, 47, 0.85) 106.93%);
+                p{
+                    color: $colorWhite;
+                }
+                svg,path{
+                    fill: $colorWhite;
+                }
+            }
+    
+            svg,img{
+                margin-bottom: 28px;
+            }
         }
     }
-    .btn-live-chat{
-        display: block;
-        max-width: max-content;
-        color: $colorWhite;
-        background: $primaryColor;
+    .contact-info-card-title{
         font-family: 'Dubai', sans-serif;
         font-size: 18px;
-        font-weight: 700;
+        font-weight: 500;
         line-height: 22px;
-        text-align: center;
-        border: none;
-        border-radius: 30px;
-        padding: 15px 41px 14px;
-        margin-left: auto;
-        margin-right: auto;
-        cursor: pointer;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        @media (max-width: 991px) {
-            font-size: 16px;
-            line-height: 18px;
-            padding: 15px 35px 14px;
-        }
-    
-        @media (max-width: 767px) {
-            font-size: 14px;
-            line-height: 14px;
-            padding: 15px 29px 14px;
-        }
+        margin-bottom: 24px;
+        text-transform: uppercase;
+    }
+    .contact-info-card-social-address-desc{
+        font-family: 'Montserrat', sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
     }
 }
 
