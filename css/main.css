@@ -98,7 +98,7 @@ ul, ol {
 =======================================================*/
 .container {
   width: 100%;
-  max-width: 1114px;
+  max-width: 1214px;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -158,7 +158,7 @@ ul, ol {
 
 .section-body .card-box {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   -webkit-column-gap: 32px;
           column-gap: 32px;
   row-gap: 75px;
@@ -722,16 +722,6 @@ ul, ol {
 #post-detail .aside-link:hover {
   color: #00ABD1;
 }
-#post-detail .aside-link.active::before {
-  position: absolute;
-  content: "";
-  background-color: #00ABD1;
-  width: 200px;
-  height: 2px;
-  left: -205px;
-  /* right: 0; */
-  margin-top: 8px;
-}
 #post-detail .aside-link.active {
   color: #00ABD1;
 }
@@ -752,16 +742,6 @@ ul, ol {
 #post-detail .aside-subnav-link:hover {
   color: #00ABD1;
   text-decoration: underline;
-}
-#post-detail .aside-subnav-link.active::before {
-  position: absolute;
-  content: "";
-  background-color: #00ABD1;
-  width: 200px;
-  height: 2px;
-  left: -190px;
-  /* right: 0; */
-  margin-top: 8px;
 }
 #post-detail .aside-subnav-link.active {
   color: #00ABD1;
