@@ -104,6 +104,8 @@
         .card-img{
             width: 100%;
             border-radius: 11px;
+            min-height: 181px;
+            max-height: 181px;
         }
         .card-title{
             font-family: 'Dubai', sans-serif;
@@ -459,7 +461,7 @@
 
 
 /*===============================================
-                genral-admin-topics
+            Frontend User Guides
 ===============================================*/
 #user-manual-topics{
     margin-bottom: 153px;
@@ -467,17 +469,9 @@
 
 
 /*===============================================
-                genral-admin-topics
+            Facility Admin User Guide
 ===============================================*/
-#genral-admin-topics{
-    margin-bottom: 300px;
-}
-
-
-/*===============================================
-                hq-admin-guide
-===============================================*/
-#hq-admin-guide{
+#facility-admin-topics{
     margin-bottom: 300px;
 }
 
