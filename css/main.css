@@ -829,6 +829,17 @@ ul, ol {
   width: 100%;
   margin-bottom: 18px;
 }
+#post-detail .subsection-desc-list {
+  list-style: none;
+  margin-bottom: 24px;
+}
+#post-detail .subsection-desc-item {
+  font-family: 'Dubai', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 28px;
+  text-align: left;
+}
 #post-detail .section-list {
   list-style: disc;
   margin-left: 24px;
