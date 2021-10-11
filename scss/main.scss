@@ -759,6 +759,28 @@
         line-height: 28px;
         text-align: left;
     }
+
+    .dashboard-overview-list{
+        list-style: none;
+        margin-left: 24px;
+        margin-bottom: 24px;
+    }
+    .dashboard-overview-item{
+        font-family: 'Dubai', sans-serif;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 28px;
+        text-align: left;
+        &::before{
+            content: counter(li);
+            counter-increment: li;
+            color: #ff9d0b;
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+    }
 }
 
 
