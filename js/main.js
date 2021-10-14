@@ -6,13 +6,6 @@ $(document).ready(function() {
         $(".navbar").toggle();
     });
 
-
-    // $(function() {
-    //     $("#header .nav-link").on("click touch", function() {
-    //         $(".btn-toggle").click();
-    //     });
-    // });
-
     $(function() {
         $("#header .dropdown").on("click touch", function() {
             $("#header .sub-menu").toggle();
