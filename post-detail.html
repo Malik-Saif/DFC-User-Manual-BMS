@@ -176,7 +176,7 @@
                             <p class="section-title">General admin</p>
                             <div id="sub-section1" class="sub-section">
                                 <p class="subsection-title">Logging in</p>
-                                <p class="subsection-desc">You can reach the Backend Login Panel by clicking here - <a href="https://dfc-adm.coredirection.com/admin/login" target="_blank">DFC Backend</a>. Please use the login credentials given to you by the DFC Outreach team.</p>
+                                <p class="subsection-desc">You can reach the Backend Login Panel by clicking here - <a href="https://booking-adm.dubaifitnesschallenge.com/admin" target="_blank">DFC Backend</a>. Please use the login credentials given to you by the DFC Outreach team.</p>
                                 <img src="./images/backend-post-detail/Login.gif" width="677" class="section-img" alt="">
                             </div>
                             <div id="sub-section2" class="sub-section">
@@ -236,13 +236,13 @@
                                 <img src="./images/backend-post-detail/User-tab--Business-Banner.png" width="677" class="section-img" alt="">
                                 <p class="subsection-desc"><strong>Business information:</strong> Here you can put a description of your business or facility.</p>
                                 <img src="./images/backend-post-detail/User-tab--Business-Information.png" width="677" class="section-img" alt="">
-                                <p class="subsection-desc"><strong>Website:</strong> Enter your business’ website url here.</p>
+                                <p class="subsection-desc"><strong>Website:</strong> Enter your business’ website URL here and ensure you have https:// at the beginning of the URL.</p>
                                 <img src="./images/backend-post-detail/User-tab--Website-URL.png" width="677" class="section-img" alt="">
                                 <p class="subsection-desc"><strong>Terms and Conditions:</strong> Here you can upload a Terms & Conditions document that will be emailed to participants with booking confirmation. Please upload in PDF format no larger than 500kb.</p>
-                                <p class="subsection-desc"><strong>Phone:</strong> Enter your business’ phone number here.</p>
+                                <p class="subsection-desc"><strong>Phone:</strong> Enter your business’ phone number here and ensure you include the country code.</p>
                                 <img src="./images/backend-post-detail/User-tab--Phone.png" width="677" class="section-img" alt="">
-                                <p class="subsection-desc"><strong>Category:</strong> Here you can select what kind of business you are and what specific activity types you offer. These categories will be used in the booking application so frontend users can find the type of activities they are looking for.</p>
-                                <img src="./images/backend-post-detail/User-tab--Category.png" width="677" class="section-img" alt="">
+                                <p class="subsection-desc"><strong>Reset Password:</strong> Once you have logged in and wish to reset your password, you can do it here by simply putting in your new password and clicking "Update & Close"</p>
+                                <img src="./images/backend-post-detail/reset-password.png" width="677" class="section-img" alt="">
                                 <p class="subsection-desc">All other input fields are not required and are used by HQ admin only. Please leave the following fields blank: Firstname - Lastname - Gender - DOB.</p>
                             </div>
                             <div id="sub-section6" class="sub-section">
@@ -276,12 +276,6 @@
                                     <li class="dashboard-overview-item">View booked users and check them in</li>
                                     <li class="dashboard-overview-item">Cancel a class</li>
                                 </ol>
-                                <!-- <p class="subsection-desc"><strong></strong></p>
-                                <p class="subsection-desc"><strong></strong></p>
-                                <p class="subsection-desc"><strong></strong></p>
-                                <p class="subsection-desc"><strong></strong></p>
-                                <p class="subsection-desc"><strong></strong></p>
-                                <p class="subsection-desc"><strong></strong></p> -->
                                 <img src="./images/backend-post-detail/Managing-bookings--Dashboard-overview.png" width="677" class="section-img" alt="">
                             </div>
                             <div id="sub-section10" class="sub-section">
@@ -320,7 +314,7 @@
                             <div id="sub-section15" class="sub-section">
                                 <p class="subsection-title">Creating & Selecting an Instructor</p>
                                 <p class="subsection-desc">To create an instructor profile, navigate to the menu on the left hand side, click ‘User’ > ‘Instructor’ and ‘Add new’.</p>
-                                <p class="subsection-desc">Enter the instructor's name and click ‘Save’.</p>
+                                <p class="subsection-desc">Enter the instructor's name and click ‘Create and return to list’.</p>
                                 <p class="subsection-desc">Navigate back to the dashboard and use the drop-down menu to select a user for a specific class.</p>
                                 <img src="./images/backend-post-detail/Managing-bookings--Creating-and-selecting-instructor.gif" width="677" class="section-img" alt="">
                             </div>
@@ -350,7 +344,7 @@
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Start-Date-time.png" width="677" class="section-img" alt="">
                                 <p class="subsection-desc"><strong>Recurrence:</strong> For recurring classes, you can select which days of the week your class will be running. For example if your class runs every Monday for 4 weeks, you can select Monday in recurrence and set your end date to 4 weeks after the start date.</p>
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Recurrence.png" width="677" class="section-img" alt="">
-                                <p class="subsection-desc"><strong>Duration:</strong> This is how long your class will last in minutes.</p>
+                                <p class="subsection-desc"><strong>Duration:</strong> This is how long your class or activity will last for in minutes. If you are listing a day pass please calculate the number of hours your facility is open and multiply by 60. Example: If your facility is open 24 hours a day and you are will to allow people to enter your facility during all hours, this will be 1,440 minutes calculated as 60 X 24.</p>
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Duration.png" width="677" class="section-img" alt="">
                                 <p class="subsection-desc"><strong>Offer online:</strong> If your class is an online class, please check this box.</p>
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Online.png" width="677" class="section-img" alt="">
@@ -361,19 +355,19 @@
                                 <p class="subsection-title">Creating a Zone</p>
                                 <p class="subsection-desc">Zones are used to direct users to the correct location within your facility. For example if you have multiple studios in your facility you can create them here. </p>
                                 <p class="subsection-desc">To create a zone, in the left hand panel select ‘Schedule’ > ‘Zones’ > ‘Add new’.</p>
-                                <p class="subsection-desc">Then input the ‘Zone Title’ and ‘Description’ and Click ‘Save’.</p>
+                                <p class="subsection-desc">Then input the ‘Zone Title’ and ‘Description’ and Click ‘Create and return to list’.</p>
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Zone.png" width="677" class="section-img" alt="">
                             </div>
                             <div id="sub-section19" class="sub-section">
                                 <p class="subsection-title">Creating an Activity</p>
                                 <p class="subsection-desc">Creating an activity allows you to name your class and provide a brief description of it. You can then select this activity when scheduling a class.</p>
-                                <p class="subsection-desc">To create an activity, in the left hand panel select ‘Schedule’ > Activity > ‘Add new’.</p>
+                                <p class="subsection-desc">To create an activity, in the left hand panel select ‘Schedule’ > Activity > ‘Add new’. (Top right)</p>
                                 <p class="subsection-desc">Then select your activity type, eg. yoga. 
                                     <em>
                                         Activity types are set by Dubai Fitness Challenge Admins, if there is not an activity type that suits your activity please contact your Fitness Outreach Advisor.
                                     </em>
                                 </p>
-                                <p class="subsection-desc">You can then enter the activity name and description and click ‘Save’.</p>
+                                <p class="subsection-desc">You can then enter the activity name and description and click ‘Create and return to list’.</p>
                                 <img src="./images/backend-post-detail/Scheduling-Class--Creating-Class--Activity.png" width="677" class="section-img" alt="">
                             </div>
                             <div id="sub-section20" class="sub-section">
